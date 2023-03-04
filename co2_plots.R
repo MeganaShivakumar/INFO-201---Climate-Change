@@ -47,5 +47,3 @@ summary_info$max_energy_per_cap <- co2 %>%
 summary_info$min_energy_per_cap <- co2 %>% 
   filter(energy_per_capita == min(energy_per_capita, na.rm = TRUE)) %>% 
   pull(country)
-
-my_server <- function(input, output) {

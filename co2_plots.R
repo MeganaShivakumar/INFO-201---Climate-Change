@@ -30,15 +30,11 @@ summary_info$num_countries <- co2 %>%
 
 summary_info$max_co2_prod <- co2 %>% 
   filter(co2 == max(co2, na.rm = TRUE)) %>% 
-  pull(country) # Asia
+  pull(country) 
 
 summary_info$min_co2_prod <- co2 %>% 
   filter(co2 == min(co2, na.rm = TRUE)) %>% 
-  pull(country) # Africa
-
-summary_info$min_co2_prod_year <- co2 %>% 
-  filter(co2 == min(co2, na.rm = TRUE)) %>% 
-  pull(year)
+  pull(country) 
 
 summary_info$max_energy_per_cap <- co2 %>% 
   filter(energy_per_capita == max(energy_per_capita, na.rm = TRUE)) %>% 
